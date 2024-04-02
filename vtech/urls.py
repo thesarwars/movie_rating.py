@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mrating import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("login/", views.user_login, name="user_login"),
+    path('movie/', views.add_movie, name="add_movie"),
+    path('get-movie/', views.get_movies, name="get_movie"),
+    path('rate-movie/', views.rate_movie, name='rate_movie'),
+    path('search-movie/', views.search_movie, name='search_movie'),
 ]

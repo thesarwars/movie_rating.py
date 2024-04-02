@@ -28,5 +28,5 @@ class MovieRating(models.Model):
     rating = models.FloatField()
     
     def __str__(self):
-        return self.user_id
+        return str(self.rating)
     
